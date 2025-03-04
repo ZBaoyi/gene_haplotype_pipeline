@@ -29,7 +29,7 @@ def generate_haplotypes(ped_file):
             genotype_list = l[6:]
             hap_list = []
             for g1, g2 in zip(genotype_list[::2], genotype_list[1::2]):
-                if g1=="N" or g2=="N":
+                if g1=="N" or g2=="N" or g1=="*" or g2=="*":
                     hap_list.append("N")
                 elif g1==g2:
                     hap_list.append(g1)
